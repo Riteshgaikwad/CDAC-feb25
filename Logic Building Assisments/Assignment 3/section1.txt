@@ -56,7 +56,7 @@ System.out.println(i);
 }
 // Error to investigate: What is the issue with the loop boundaries? How should the loop be adjusted to meet the
 expected output?
---->
+--->here the coonditon given is i<=10 which includes the 10 as well so it print 1 to 10 . to have a desired output we have to write i<10; this will print 1 to 9 as expected.
 
 
 Snippet 5:
@@ -69,7 +69,7 @@ System.out.println(i);
 }
 // Error to investigate: Why does this loop not print numbers in the expected order? What is the problem with the
 initialization and update statements in the `for` loop?
---->
+---> this is not printing the expected output because the condition is incrementing the value of i instead of decrement . to solve this problem we need to have a condition as i--; we will get desired output. 
 
 
 
@@ -83,7 +83,12 @@ System.out.println("Done");
 }
 // Error to investigate: Why does "Done" print only once, outside the loop? How should the loop body be enclosed to
 include all statements within the loop?
---->
+--->for loops without braces { } only include the next single statement in the loop body.
+so,the second line comes out of the loop so it runs ones.
+---> for (int i = 0; i < 5; i++) {
+            System.out.println(i);
+            System.out.println("Done"); // Now inside the loop
+        }
 
 
 
@@ -99,7 +104,7 @@ count++;
 }
 // Error to investigate: Why does this code produce a compilation error? What needs to be done to initialize the loop
 variable properly?
---->
+--->here the count variable is not initialized before use so we will get an error.So, we have to initialize the count=0; this will solve the error.
 
 
 
@@ -115,7 +120,7 @@ num--;
 }
 // Error to investigate: Why does this loop print unexpected numbers? What adjustments are needed to print the
 numbers from 1 to 5?
---->
+--->it is printing unexpected numbers because instead of increment we have decrement the variable num . so, to get desired output we will write num++;
 
 
 
@@ -130,7 +135,7 @@ System.out.println(i);
 }
 // Error to investigate: Why does the loop print unexpected results or run infinitely? How should the loop update
 expression be corrected?
---->
+--->this is expected to print the number from 0 to 4 but the condition given is wrong . it should be i++;
 
 
 
@@ -145,7 +150,7 @@ num--;
 }
 }
 // Error to investigate: Why does the loop execute indefinitely? What is wrong with the loop condition?
---->
+--->Using = instead of == is a  mistake in conditional statements.
 
 
 
@@ -162,7 +167,8 @@ i += 2; // Error: This may cause unexpected results in output
 }
 // Error to investigate: What will be the output of this loop? How should the loop variable be updated to achieve the
 desired result?
---->
+---> the desired output is to print all numbers from 0 to 4 ( 0, 1, 2, 3, 4), the issue is with the increment step. Incrementing by 2 skips some numbers.
+---> This should be declared as i++;
 
 
 
@@ -177,7 +183,8 @@ System.out.println(x); // Error: 'x' is not accessible here
 }
 }
 // Error to investigate: Why does the variable 'x' cause a compilation error? How does scope
---->
+---> a variable declared inside a block { } is only accessible within that block.
+--->The compilation error occurs because the variable x is declared inside the for loop.
 
 
 
