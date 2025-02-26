@@ -72,6 +72,12 @@ a. Search for all files with the extension ".txt" in the current directory and i
 cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ find . -type f -name "*.txt"
 ./file1.txt
 ./docs/file2.txt
+***** problem Faced:- ******
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ find . -name .txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ find . -name ".txt"
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ fd -e .txt
+Command 'fd' not found, but can be installed with:
+sudo apt install fdclone
 
 
 b. Display lines containing a specific word in a file (provide a file name and the specific
@@ -85,6 +91,19 @@ a. Display the current system date and time.
 --->
 cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment/docs$ date
 Wed Feb 26 17:07:31 UTC 2025
+*****problem faced :- *******
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment/docs$ time
+
+real    0m0.000s
+user    0m0.000s
+sys     0m0.000s
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment/docs$ date IST
+date: invalid date ‘IST’
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment/docs$ date
+Wed Feb 26 17:07:31 UTC 2025
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment/docs$ date + "%Y-%M-%D %h:%m:%s"
+date: extra operand ‘%Y-%M-%D %h:%m:%s’
+Try 'date --help' for more information.
 
 
 i) Networking:
