@@ -1,0 +1,112 @@
+Problem 1: Read the instructions carefully and answer accordingly. If there is
+any need to insert some data then do that as well.
+
+
+a) Navigate and List:
+a. Start by navigating to your home directory and list its contents. Then, move into a
+directory named "LinuxAssignment" if it exists; otherwise, create it.
+
+--->
+cdac@LAPTOP-8R6QQIBT:~$ pwd
+/home/cdac
+cdac@LAPTOP-8R6QQIBT:~$ ls
+feb25
+cdac@LAPTOP-8R6QQIBT:~$ mkdir LinuxAssignment
+cdac@LAPTOP-8R6QQIBT:~$ ls
+LinuxAssignment  feb25
+
+
+
+b) File Management:
+a. Inside the "LinuxAssignment" directory, create a new file named "file1.txt". Display its
+contents.
+---->
+cdac@LAPTOP-8R6QQIBT:~$ cd LinuxAssignment
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ touch file1.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ nano file1.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ cat file1.txt
+Hello,
+This is a demo text file. we will print the content of this file.
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$
+
+
+
+c) Directory Management:
+a. Create a new directory named "docs" inside the "LinuxAssignment" directory.
+--->
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ mkdir docs
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ ls
+docs  file1.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$
+
+
+
+d) Copy and Move Files:
+a. Copy the "file1.txt" file into the "docs" directory and rename it to "file2.txt".
+--->
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ cp file1.txt docs/file2.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ cd docs
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment/docs$ ls
+file2.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment/docs$ cat file2.txt
+Hello,
+This is a demo text file. we will print the content of this file.
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment/docs$
+
+
+e) Permissions and Ownership:
+a. Change the permissions of "file2.txt" to allow read, write, and execute permissions for
+the owner and only read permissions for others. Then, change the owner of "file2.txt" to
+the current user.
+--->
+
+
+
+
+f) Final Checklist:
+a. Finally, list the contents of the "LinuxAssignment" directory and the root directory to
+ensure that all operations were performed correctly.
+g) File Searching:
+a. Search for all files with the extension ".txt" in the current directory and its subdirectories.
+--->
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ find . -type f -name "*.txt"
+./file1.txt
+./docs/file2.txt
+
+
+b. Display lines containing a specific word in a file (provide a file name and the specific
+word to search).
+--->
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ grep "show" file1.txt
+This is a demo text file. we will show the content of this file.
+
+h) System Information:
+a. Display the current system date and time.
+--->
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment/docs$ date
+Wed Feb 26 17:07:31 UTC 2025
+
+
+i) Networking:
+a. Display the IP address of the system.
+b. Ping a remote server to check connectivity (provide a remote server address to ping).
+j) File Compression:
+a. Compress the "docs" directory into a zip file.
+b. Extract the contents of the zip file into a new directory.
+k) File Editing:
+
+a. Open the "file1.txt" file in a text editor and add some text to it.
+--->
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ nano file1.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ cat file1.txt
+Hello,
+This is a demo text file. we will print the content of this file.
+
+
+b. Replace a specific word in the "file1.txt" file with another word (provide the original
+word and the word to replace it with).
+--->
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ sed -i 's/print/show/g' file1.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ cat file1.txt
+Hello,
+This is a demo text file. we will show the content of this file.
