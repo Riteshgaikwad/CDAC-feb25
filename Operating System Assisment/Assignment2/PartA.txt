@@ -1,0 +1,76 @@
+What will the following commands do?
+
+Q. echo "Hello, World!"
+---> This command is used to print in the terminal. It will print Hello, World!
+
+Q. name="Productive"
+---> It is a variable name initialized with a value Productive.It is remembered until your shell is active.
+
+Q.touch file.txt
+---> It is used to create a empty file i.e. file.txt
+
+Q.ls -a
+---> it will list all files and directories which start from letter a.
+
+Q.rm file.txt
+---> used to delete a file
+
+Q.cp file1.txt file2.txt
+--->used to copy the file content from file1.txt to file2.txt
+
+Q.mv file.txt /path/to/directory/
+---> used to remove file given into a given path 
+
+Q.chmod 755 script.sh
+--->it is used as a permission changer. So it will change the permissions of script.sh
+
+Q.grep "pattern" file.txt
+---> it is used to search a specific pattern. So,this will search pattern in file.txt
+
+Q.kill PID
+---> it is used to terminate . This will terminate the process with specific PID
+
+Q. mkdir mydir && cd mydir && touch file.txt && echo "Hello, World!" > file.txt && cat file.txt
+---> mkdir will create a directory
+    then cd will change the dorectory i.e move to mydir which is created
+    then touch will create a file.txt in mydir
+    then writes Hello,World! into file.txt 
+    then cat will disply the content of file.txt i.e. Hello,World!.
+
+Q.ls -l | grep ".txt"
+--->ls will list the file with long format and grep will filter with .txt in their name
+
+Q.cat file1.txt file2.txt | sort | uniq
+---> it will first combine the content of file1.txt and file2.txt .
+    then it will sort the content | indicated pipe 
+    and the the duplicates from the combined content are removed and printed
+
+Q.ls -l | grep "^d"
+--->it is listing file in long format for directories d means directory 
+    ***doubt***
+Q.grep -r "pattern" /path/to/directory/
+---> -r means recurssive.so it recursively search for pattern in all files in given directory
+
+Q.cat file1.txt file2.txt | sort | uniq -d
+---> it will first combine the content of file1.txt and file2.txt .
+    then it will sort the content | indicated pipe 
+    and the the duplicates from the combined content are  printed because of -d
+
+Q.chmod 644 file.txt
+---> change the permission of file.txt
+owner:-6 i.e. Read,writes
+Group:- i.e. Read 
+Other:- i.e. Read
+
+Q.cp -r source_directory destination_directory
+---> copy recursively source_directory to destination_directory
+
+Q.find /path/to/search -name "*.txt"
+--->search for txt file within the defined directory and sub-directory
+
+Q.chmod u+x file.txt
+---> give the permission to user of execution of file.txt
+
+Q.echo $PATH
+--->print or dispy the current path environment variable .
+***doubt*** 
