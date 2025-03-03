@@ -2,16 +2,171 @@ Problem 2: Read the instructions carefully and answer accordingly. If there is
 any need to insert some data then do that as well.
 a. Suppose you have a file named "data.txt" containing important information. Display the
 first 10 lines of this file to quickly glance at its contents using a command.
+--->
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ touch data.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ nano data.text
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ cat data.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ nano data.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ cat data.txt
+Name1
+Name2
+Name3
+Name4
+Name5
+Name6
+Name7
+Name8
+Name9
+Name10
+Name11
+Name12
+Name13
+Name14
+NAme15
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ cat head -10 data.txt
+cat: invalid option -- '1'
+Try 'cat --help' for more information.
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$  head -10 data.txt
+Name1
+Name2
+Name3
+Name4
+Name5
+Name6
+Name7
+Name8
+Name9
+Name10
+
+
 b. Now, to check the end of the file for any recent additions, display the last 5 lines of
 "data.txt" using another command.
+--->
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ tail -5 data.txt
+Name11
+Name12
+Name13
+Name14
+NAme15
+
+
 c. In a file named "numbers.txt," there are a series of numbers. Display the first 15 lines of
 this file to analyze the initial data set.
+--->
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ nano numbers.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ cat numbers.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ head -15 numbers.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+
+
+
 d. To focus on the last few numbers of the dataset, display the last 3 lines of "numbers.txt".
+--->
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ tail -3 numbers.txt
+18
+19
+20
+
+
+
 e. Imagine you have a file named "input.txt" with text content. Use a command to translate
 all lowercase letters to uppercase in "input.txt" and save the modified text in a new file
 named "output.txt."
+--->
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ touch input.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ nano input.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ cat input.txt
+Hello How are you?
+
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ tr '[:lower:]' '[:upper:]' < input.t
+xt > output.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ cat output.txt
+HELLO HOW ARE YOU?
+
+
+
+
+
 f. In a file named "duplicate.txt," there are several lines of text, some of which are
 duplicates. Use a command to display only the unique lines from "duplicate.txt."
+--->
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ touch duplicate.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ nano duplicate.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ cat duplicate.txt
+Ritesh
+Ramesh
+Samrat
+Aman
+Ritesh
+Samrat
+Shweta
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ cat duplicate.txt | sort | uniq
+Aman
+Ramesh
+Ritesh
+Samrat
+Shweta
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$
+
+
+
 g. In a file named "fruit.txt," there is a list of fruits, but some fruits are repeated. Use a
 command to display each unique fruit along with the count of its occurrences in
 "fruit.txt."
+--->
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ touch fruit.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ nano fruit.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ cat fruit.txt
+apple
+mango
+orange
+pineapple
+grapes
+apple
+orange
+
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ cat fruit.txt | sort | uniq -c
+      1
+      2 apple
+      1 grapes
+      1 mango
+      2 orange
+      1 pineapple
+
+
+
+
