@@ -1,0 +1,222 @@
+Question 1: Write a shell script that prints "Hello, World!" to the terminal.
+--->
+cdac@LAPTOP-8R6QQIBT:~$ echo "Hello,World!"
+Hello,World!
+
+
+Question 2: Declare a variable named "name" and assign the value "CDAC Mumbai" to it. Print the
+value of the variable.
+--->
+cdac@LAPTOP-8R6QQIBT:~$ name="CDAC Mumbai"
+cdac@LAPTOP-8R6QQIBT:~$ echo "Value of name=$name"
+Value of name=CDAC Mumbai
+
+
+Question 3: Write a shell script that takes a number as input from the user and prints it.
+--->
+cdac@LAPTOP-8R6QQIBT:~$ touch script.txt
+cdac@LAPTOP-8R6QQIBT:~$ nano script.txt
+cdac@LAPTOP-8R6QQIBT:~$ cat script.txt
+echo "Enter a number:"
+read number
+echo "Number is:$number"
+cdac@LAPTOP-8R6QQIBT:~$ bash script.txt
+Enter a number:
+85
+Number is:85
+
+
+
+Question 4: Write a shell script that performs addition of two numbers (e.g., 5 and 3) and prints the
+result.
+--->
+cdac@LAPTOP-8R6QQIBT:~$ nano script.txt
+cdac@LAPTOP-8R6QQIBT:~$ bash script.txt
+Enter a number:
+5
+Enter a numner:
+8
+sum is:13
+cdac@LAPTOP-8R6QQIBT:~$ cat script.txt
+echo "Enter a number:"
+read num1
+echo "Enter a numner:"
+read num2
+sum=0
+sum=`expr $num1 + $num2 `
+echo "sum is:$sum"
+cdac@LAPTOP-8R6QQIBT:~$ bash script.txt
+Enter a number:
+8
+Enter a numner:
+8
+sum is:16
+
+
+
+
+
+Question 5: Write a shell script that takes a number as input and prints "Even" if it is even, otherwise
+prints "Odd".
+--->
+cdac@LAPTOP-8R6QQIBT:~$ nano script.txt
+cdac@LAPTOP-8R6QQIBT:~$ cat script.txt
+echo "Enter a number:"
+read num1
+if [ $((num1 % 2 )) -eq 0 ]
+then
+echo "Even"
+else
+echo "Odd"
+fi
+cdac@LAPTOP-8R6QQIBT:~$ bash script.txt
+Enter a number:
+4
+Even
+cdac@LAPTOP-8R6QQIBT:~$ bash script.txt
+Enter a number:
+5
+Odd
+
+
+Question 6: Write a shell script that uses a for loop to print numbers from 1 to 5.
+--->
+cdac@LAPTOP-8R6QQIBT:~$ nano script.txt
+cdac@LAPTOP-8R6QQIBT:~$ cat script.txt
+for a in 1 2 3 4 5
+do
+echo $a
+done
+cdac@LAPTOP-8R6QQIBT:~$ bash script.txt
+1
+2
+3
+4
+5
+
+
+
+
+Question 7: Write a shell script that uses a while loop to print numbers from 1 to 5.
+--->
+cdac@LAPTOP-8R6QQIBT:~$ nano script.txt
+cdac@LAPTOP-8R6QQIBT:~$ cat script.txt
+i=1
+while [ $i -le 5 ]
+do
+    echo $i
+    i=`expr $i + 1`
+done
+
+cdac@LAPTOP-8R6QQIBT:~$ bash script.txt
+1
+2
+3
+4
+5
+
+
+
+Question 8: Write a shell script that checks if a file named "file.txt" exists in the current directory. If it
+does, print "File exists", otherwise, print "File does not exist".
+--->
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ ls
+data.text  docs           file1.txt  input.txt    output.txt
+data.txt   duplicate.txt  fruit.txt  numbers.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ nano file1.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ bash file1.txt
+File does not exist
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ ls
+data.text  docs           file1.txt  input.txt    output.txt
+data.txt   duplicate.txt  fruit.txt  numbers.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ touch file.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ bash file1.txt
+File exists
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ ls
+data.text  docs           file.txt   fruit.txt  numbers.txt
+data.txt   duplicate.txt  file1.txt  input.txt  output.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ cat file1.txt
+
+if [ -f "file.txt" ]; then
+    echo "File exists"
+else
+    echo "File does not exist"
+fi
+
+
+
+Question 9: Write a shell script that uses the if statement to check if a number is greater than 10 and
+prints a message accordingly.
+--->
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ nano file1.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ cat file1.txt
+echo "Enter a number:"
+read num
+if [ "$num" -gt 10 ]; then
+    echo "Number greater than 10"
+else
+    echo "Numner less than 10"
+fi
+
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ bash file1.txt
+Enter a number:
+45
+Number greater than 10
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ bash file1.txt
+Enter a number:
+5
+Numner less than 10
+
+
+
+Question 10: Write a shell script that uses nested for loops to print a multiplication table for numbers
+from 1 to 5. The output should be formatted nicely, with each row representing a number and each
+column representing the multiplication result for that number.
+--->
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ nano file1.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ bash file1.txt
+Multiplication Table  1 to 5 :-
+   1   2   3   4   5
+   2   4   6   8  10
+   3   6   9  12  15
+   4   8  12  16  20
+   5  10  15  20  25
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ cat file1.txt
+echo "Multiplication Table  1 to 5 :-"
+for i in {1..5}; do
+      for j in {1..5}; do
+        printf "%4d" $((i * j))
+        done
+    echo
+done
+
+
+Question 11: Write a shell script that uses a while loop to read numbers from the user until the user enters
+a negative number. For each positive number entered, print its square. Use the break statement to exit the
+loop when a negative number is entered.
+--->
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ nano file1.txt
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ cat file1.txt
+
+while true; do
+    echo -n "Enter a number (negative number to exit): "
+    read num
+
+    if [ "$num" -lt 0 ]; then
+        echo "Negative number detected. Exiting..."
+        break
+    fi
+    square=$((num * num))
+    echo "Square of $num is $square"
+done
+
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$ bash file1.txt
+Enter a number (negative number to exit): 5
+Square of 5 is 25
+Enter a number (negative number to exit): 8
+Square of 8 is 64
+Enter a number (negative number to exit): -5
+Negative number detected. Exiting...
+cdac@LAPTOP-8R6QQIBT:~/LinuxAssignment$
+
+
