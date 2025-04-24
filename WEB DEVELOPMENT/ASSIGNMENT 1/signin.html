@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In page</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 100vh;
+        background-image: url(images/bg1.jpg);
+        background-size: cover;
+      }
+      .container {
+        display: flex;
+        width: 800px;
+        height: 500px;
+        border-radius: 10px;
+        opacity: 0.9;
+        overflow: hidden;
+      }
+      .left-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        background-color: white;
+        
+      }
+      h1 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+      .logo {
+        margin-bottom: 40px;
+      }
+      input {
+        margin-top: 20px;
+        width: 300px;
+        height: 30px;
+        border: none;
+        border-bottom: 1px solid;
+        background-color: transparent;
+      }
+      input:focus {
+        outline: none;
+      }
+      .sub {
+        margin-top: 20px;
+      }
+      input:hover{
+        transform: scale(1.01);
+        transition: 0.3s;
+        cursor: pointer;
+    }
+      .btn {
+        width: 270px;
+        height: 40px;
+        border: none;
+        border-radius: 6px;
+        margin: 30px auto;
+        font-size: 15px;
+        border: 1px solid gray;
+        background-color: #86a1ce;
+      }
+      .right-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 400px;
+        background-color: rgb(27, 68, 144);
+        color: white;
+      }
+      h2 {
+        font-size: 50px;
+      }
+      .btn-sign {
+        width: 270px;
+        height: 40px;
+        border: none;
+        border-radius: 6px;
+        margin: 30px auto;
+        font-size: 15px;
+        border: 1px solid gray;
+        background-color: #86a1ce;
+        color: whi;
+      }
+      button:hover{
+        cursor: pointer;
+        transform: scale(1.01);
+        transition: 0.4s;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-container">
+        <h1>Sign In</h1>
+        <div class="logo">
+          <img src="images/email.png" alt="email" height="50px" width="50px" />
+          <img
+            src="images/github.png"
+            alt="github"
+            height="45px"
+            width="45px"
+          />
+          <img
+            src="images/linkedin.png"
+            alt="linkedin"
+            height="45px"
+            width="45px"
+          />
+        </div>
+        <p>Or sign in using E-Mail Address</p>
+        <input type="text" name="email" id="email" placeholder="Enter Email" />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter password"
+        />
+        <p class="sub">Forget your password?</p>
+        <button class="btn">SIGN IN</button>
+      </div>
+      <div class="right-container">
+        <h2>Create,<br />Account!</h2>
+        <p class="sub">Sign up if you still don't have a account</p>
+        <button class="btn-sign">SIGN UP</button>
+      </div>
+    </div>
+  </body>
+</html>
