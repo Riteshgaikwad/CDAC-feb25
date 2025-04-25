@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f0f0f0; 
+            font-family: Arial, sans-serif;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 20px 100px; 
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden; 
+        }
+
+        .left-container {
+            background-color: #2c3e50; 
+            color: white;
+            padding: 20px;
+            width: 300px; 
+        }
+
+        .left-container h2, .right-container h3{
+            color: #86a1ce;
+        }
+
+        .right-container h1{
+            color: #2c3e50;
+        }
+
+        .left-container h3 {
+            margin-top: 20px;
+            font-size: 1.2em;
+            border-bottom: 1px solid #86a1ce;
+            padding-bottom: 5px;
+        }
+
+        .left-container ul {
+            list-style: none;
+            padding-left: 0;
+            font-size: 0.9em;
+        }
+
+        .left-container li {
+            margin-bottom: 10px;
+        }
+
+        .left-container b {
+            color: #86a1ce;
+        }
+
+        .right-container {
+            padding: 20px;
+            flex: 1;
+            background-color: #f9f9f9; 
+            border-left: 1px solid #ddd;
+        }
+
+        .right-container h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .right-container p {
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .right-container h3 {
+            font-size: 1.2em;
+            margin-top: 20px;
+            border-bottom: 1px solid white;
+            padding-bottom: 5px;
+        }
+
+        .right-container ul {
+            list-style: none;
+            padding-left: 0;
+            font-size: 0.95em;
+            line-height: 1.5; 
+        }
+
+        .right-container li {
+            margin-bottom: 15px;
+        }
+
+       .right-container li b{
+            color: #2c3e50;
+        }
+
+        .right-container p {
+            margin-bottom: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+  </head>
+  <body>
+   
+    <div class="container">
+        <div class="left-container">
+            <img src="images/img.png" alt="img" >
+    <h3>SKILLS</h3>
+    <ul>
+      <li><b> Languages:</b> Java, SQL</li>
+      <li>
+        <b>Technical Skills:</b> HTML, CSS, Tailwind, JavaScript, React, OOP,
+        DBMS.
+      </li>
+      <li>
+        <b>Machine Learning:</b> Classification, Regression, Clustering,
+        Association, Data Preprocessing, CNN, RNN.
+      </li>
+      <li><b>Developer Tools:</b> Git, GitHub.</li>
+    </ul>
+    <h3>EDUCATION</h3>
+    <ul>
+      <li>
+        <b> B.E. IT | (8.88 CGPA)</b> <br />
+        SIT, Lonavala • SPPU, Pune, Maharashtra • 2024
+      </li>
+      <li>
+        <b>H.S.C. | (72.62%)</b> <br />
+        Vidyamandir Junior College, Islampur • MSBSHSE Board • 2020
+      </li>
+      <li>
+        <b> S.S.C | (79.80%) | (8.88 CGPA)</b> <br />
+        Venkateshwara Public School, Peth-Naka • CBSE Board• 2018
+      </li>
+    </ul>
+</div>
+<div class="right-container">
+    <h1 style="text-align: center ">RITESH RAMESH GAIKWAD</h1>
+    <p style="text-align: center">
+      Pune, India | +91-7385537969 | gaikwadritesh2003@gmail.com 
+    </p><br>
+    <h3>ACHIEVEMENT</h3>
+    <ul>
+      <li>
+        <b>
+          2nd Price in Technosphere <br />Rajarambapu Institute of Technology,
+          Islampur</b
+        >
+        <br />
+        Participate in the "Technosphere”, Secured 2nd place among 25 competing
+        teams in [Web Development, Technosphere] organized by RIT.
+      </li>
+    </ul>
+    <h3>PROJECTS</h3>
+    <ul>
+      <li>
+        <b>Online Examination Proctoring System </b> <br />
+        <p>
+          We proposed a system that includes, among other things, the
+          candidate's surrounding environment, a liveliness check, and a face
+          comparison of the candidate with his or her image. The evaluator can
+          use this application to double-check the candidate's activity at any
+          time during the examination. This includes authentication before
+          proceeding, Examination monitoring, random image capturing, and video
+          monitoring. Technology: Python, Machine Learning, SQL.
+        </p>
+      </li>
+      <li>
+        <b>StudyNotion Ed-Tech Platform</b> <br />
+        <p>
+          StudyNotion is a versatile and intuitive ed-tech platform that enables
+          users to create, consume, and rate educational content. It provides a
+          seamless and interactive learning experience for students while
+          offering a platform for instructors to showcase their expertise and
+          connect with learners worldwide. The platform is built using the MERN
+          stack, which includes ReactJS, NodeJS, MongoDB, and ExpressJS.
+        </p>
+      </li>
+    </ul>
+    <h3>CO-CURRICULAR ACTIVITIES</h3>
+    <ul>
+      <li>
+        
+          Led a team to develop a web application during Technosphere, securing
+          2nd out of 50 participants.
+      </li>
+      <li>
+        Played Football at SPPU University, demonstrating teamwork and
+          leadership.
+      </li>
+    </ul>
+</div>
+</div>
+  </body>
+</html>
